@@ -19,7 +19,7 @@ function login() {
  * @param {string} invalidLogin - The error message element to display if the login is invalid.
  * @param {string} hideUnderline - The element to hide when displaying the error message.
  */
- async function checkUser(invalidLogin, hideUnderline) {
+async function checkUser(invalidLogin, hideUnderline) {
     if (currentUser) {
         await backend.setItem('current-user', JSON.stringify(currentUser));
         checkRememberMe(currentUser);
@@ -56,7 +56,7 @@ function emailSent() {
 /**
  * Logs in a guest user by setting the current user as a guest and redirecting to the summary page.
  */
-  async function guestLogin() {
+async function guestLogin() {
     currentUser = {'name': 'Guest'};
     await backend.setItem('current-user', JSON.stringify(currentUser));
     window.location.href = 'summary.html';
