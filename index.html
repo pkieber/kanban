@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/join_logo.svg">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/data.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <title>Log In | Join</title>
+</head>
+
+<body onload="loadUsers(), checkRememberMeData(), animationMobileStop()">
+
+    <img class="join-logo logo-animation" src="assets/img/join_logo.svg" alt="join-logo">
+    <img class="d-none bg-mobile-animation" src="assets/img/bg-mobile.svg" alt="">
+    <!-- Start-Page! -->
+    <img class="d-none" id="animation-mobile" src="assets/img/animation_mobile.svg" alt="animation mobile">
+        <div class="start-bg start-bg-mobile">
+            <div class="content" id="login-page">
+                <div class="sign-up">
+                    <span class="span-font">Not a Join user?</span>
+                    <button class="sign-up-btn-login" onclick="location.href='sign_up.html'">Sign up</button>
+                </div>
+                <form class="login-page standard-box" onsubmit="login(); return false;">
+                    <span class="heading-span">Log in</span>
+                    <span class="msg-box d-none" id="invalid-login">Invalid email or password!</span>
+                    <span class="msg-box d-none" id="guest-login-text">Logged-In as guest!</span>
+                    <img src="assets/img/underline.svg" alt="underline" class="underline" id="hide-underline">
+                    <img src="assets/img/log_in_underline_mob.svg" alt="underline-mobile"
+                        class="underline-mobile d-none">
+                    <input class="input-email-pw input-email-img" type="email" name="email" placeholder="Email"
+                        id="email" required>
+                    <input class="input-email-pw input-password-img" type="password" name="password"
+                        placeholder="Password" id="password" required>
+                    <div class="login-bottom">
+                        <div>
+                            <input type="checkbox" checked="true" id="remember-me"
+                                onclick="event.stopPropagation(); deleteRememberMe()">
+                            <span class="login-bottom-font">Remember me</span>
+                        </div>
+                        <a class="login-bottom-font" href="forgot_password.html"
+                            onclick="event.stopPropagation()">Forgot my
+                            password</a>
+                    </div>
+                    <div class="login-buttons">
+                        <button type="submit" class="login-btn btn-font login-btn-mob">Log in</button>
+                        <button type="button" class="guest-login-btn btn-font login-btn-mob"
+                            onclick="guestLogin()">Guest Log in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+</body>
+
+</html>

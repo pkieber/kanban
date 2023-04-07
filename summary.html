@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/join_logo.svg">
+    <link rel="stylesheet" href="css/header_nav.css">
+    <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="js/include.js"></script>
+    <script src="js/summary.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/mini_backend.js"></script>
+
+    <title>Summary | Join</title>
+</head>
+
+<body onload="initSummary(), deletOverDiv()" ; onclick="closeLogoutMenu()">
+
+    <!--Header + Nav Templates-->
+    <div w3-include-html="assets/templates/header.html"></div>
+    <div w3-include-html="assets/templates/nav.html"></div>
+
+    <div id="overDivMobile"></div>
+
+    <!--Greet-Mobile-->
+    <div id="greetMobileCont" class="greet-container-mobile d-none">
+        <div class="greet-content-mobile">
+            <span id="greetMobile"></span>
+            <span id="usernameMobile"></span>
+        </div>
+    </div>
+
+    <!--Main Content-->
+    <div id="mainContainer" class="main-container">
+        <div class="headline-mobile d-none">Kanban Project Management Tool</div>
+        <div class="title-container no-gap">
+            <h1>Summary</h1>
+            <div class="vl"></div>
+            <span class="headline-sub">Everything in a nutshell!</span>
+            <img class="underline d-none" src="assets/img/summary_underline.svg" alt="underline">
+        </div>
+
+
+        <div class="sub-container">
+            <!--Tasks Content-->
+
+            <div class="summary-contant-container">
+                <div class="nav-to-container">
+                    <a class=" nav-to-content" href="board.html">
+                        <span id="countInBoard" class="counter"></span>
+                        <span class="counter-title">Tasks in Board</span>
+                    </a>
+                    <a class="nav-to-content" href="board.html">
+                        <span id="countInProgress" class="counter"></span>
+                        <span class="counter-title">Tasks in Pregress</span>
+                    </a>
+                    <a class="nav-to-content" href="board.html">
+                        <span id="countAwaitFeedback" class="counter"></span>
+                        <span class="counter-title">Awaiting Feedback</span>
+                    </a>
+                </div>
+
+                <!--Urgent Content-->
+                <div class="urgent-container">
+                    <a class="urgent" href="board.html">
+                        <div class="urg-cont">
+                            <img class="urgency-img" src="assets/img/urgency.png">
+                            <img class="urgency-img-mob d-none" src="assets/img/urgency_mob.svg" alt="urgency-image">
+                            <div class="cont-containter">
+                                <span id="countUrgent" class="counter-urg"></span>
+                                <span class="counter-title-urg">Urgent</span>
+                            </div>
+                        </div>
+                        <div class="vl-urg"></div>
+                        <div class="dl-containter">
+                            <span id="dlDate" class="dl-date"></span>
+                            <span class="dl-text">Upcoming Deadline</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!--To-do-done-Content-->
+                <div class="nav-to-container">
+                    <div class="todo-done-container">
+                        <a class="todo-done center" href="board.html">
+                            <div class="todo-cont no-gap">
+                                <img class="pencil-check-img" src="assets/img/pencil.png">
+                                <img class="d-none hover-img" src="assets/img/check_white.png">
+                                <div class="cont-containter">
+                                    <span id="countToDo" class="counter-todo counter-mob"></span>
+                                    <span class="counter-title-todo counter-text-mob">To-do</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="todo-done-container">
+                        <a class="todo-done center" href="board.html">
+                            <div class="done-cont no-gap">
+                                <img class="pencil-check-img" src="assets/img/check.png">
+                                <img class="d-none hover-img" src="assets/img/check_white.png">
+                                <div class="cont-containter">
+                                    <span id="countDone" class="counter-done counter-mob"></span>
+                                    <span class="counter-title-done counter-text-mob">Done</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="greet-container">
+                <span id="greet"></span>
+                <span id="username"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

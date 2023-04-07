@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/join_logo.svg">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="css/header_nav.css">
+    <link rel="stylesheet" href="css/help.css">
+    <script src="js/data.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <script src="js/summary.js"></script>
+    <title>Help | Join</title>
+</head>
+
+<body onload="init()"; onclick="closeLogoutMenu()">
+    <!-- Header + Nav Templates> -->
+    <div w3-include-html="assets/templates/header.html"></div>
+    <div w3-include-html="assets/templates/nav.html"></div>
+    <!-- Main Content -->
+    <main class="contacts-main-container">
+        <!-- Content - left side -->
+        <section class="contact-list-container">
+            <div>
+                <div id="firstLetter"></div>
+                <div id="contactList"></div>
+            </div>
+        </section>
+
+        <a class="arrow-left"  href="summary.html"><img src="assets/img/arrow_left.svg" alt="arrow-back"></a>
+        <a class="arrow-left-mob d-none" href="summary.html"><img src="assets/img/arrow_left_mob.svg" alt="arrow-back"></a>
+
+        <div class="main-content">
+            <div class="headline-mobile d-none">Kanban Project Management Tool</div>
+            <h1>Help</h1>
+            <h2 class="second-headline">What is Join?</h2>
+            <div class="help-main-span"> 
+                <span class="">Join is a project managment tool. It includes a kanban system which allows you to work in a team and add tasks
+                    for every teammate. So your team have an overview which task has to be done by whom, which is in progress or is already done.
+                    It's easy to handle by Using the drag and drop system to pull the task cards into the right area.
+                    So you have a great tool which supports you in the daily work.
+                </span>
+            </div>
+            <h2 class="third-headline">How to use it</h2>
+            <div>
+                <div class="explain-container">
+                    <p class="number">1.</p>
+                    <span>Push the button "Create Task" and fill the fields title and description out. Then choose different points like category, date and priority.
+                        You can also assign the tasks to the team members which are already in your contact or add new contacts in the menu "Contacts".
+                    </span>
+                </div>
+                <div class="explain-container">
+                    <p class="number">2.</p>
+                    <span>You can see added task in the menu "Board". That's a Kanbnan system where you can pull the task cards with drag and drop into the 
+                        column you need. Here you have the choice between "To Do", "In Progress", "Awating Feedback" and "Done".
+                    </span>
+                </div>
+                <div class="explain-container">
+                    <p class="number">3.</p>
+                    <span>The menu "Summary" is an overview over all tasks. Here you can see which of them are in progress or which have a deadline. 
+                        That's very important for urgent tasks. Also you can see what is already done.</span>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

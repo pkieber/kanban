@@ -1,0 +1,162 @@
+[
+    {
+        "split": "to_do",
+        "category": "Design",
+        "body_header": "Website redesign",
+        "body_content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, eveniet reiciendis ea eaque veritatis ipsam repellat explicabo ab, ex aliquam accusamus consequatur, neque sit. Impedit delectus sequi rem quisquam eaque!",
+        "progress": [
+            1,
+            2
+        ],
+        "users": [
+            {"userShort":"PD","userFullName":"Pascal Dietz"}
+        ],
+        "priotity": [
+            {
+                "img": "assets/img/low_priotity.png",
+                "priotity": "low",
+                "img_white":"assets/img/prio-low-white.png"
+            }
+        ],
+        "date": "2023-02-28",
+        "subtasks": ""
+    },
+    {
+        "split": "to_do",
+        "category": "Sales",
+        "body_header": "Website redesign",
+        "body_content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "progress": [],
+        "users": [
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"}
+        ],
+        "priotity": [
+            {
+                "img": "assets/img/medium_priotity.png",
+                "priotity": "medium",
+                "img_white":"assets/img/Prio-medium-white.png"
+            }
+        ],
+        "date": "2023-02-26",
+        "subtasks": ""
+    },
+    {
+        "split": "awaiting_feedback",
+        "category": "Backoffice",
+        "body_header": "Website redesign",
+        "body_content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "progress": [],
+        "users": [
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"}
+        ],
+        "priotity": [
+            {
+                "img": "assets/img/low_priotity.png",
+                "priotity": "low",
+                "img_white":"assets/img/Prio-low-white.png"
+            }
+        ],
+        "date": "2023-03-28",
+        "subtasks": ""
+    },
+    {
+        "split": "awaiting_feedback",
+        "category": "Media",
+        "body_header": "Website redesign",
+        "body_content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "progress": [],
+        "users": [
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"}
+        ],
+        "priotity": [
+            {
+                "img": "assets/img/medium_priotity.png",
+                "priotity": "medium",
+                "img_white":"assets/img/Prio-medium-white.png"
+            }
+        ],
+        "date": "2023-02-28",
+        "subtasks": ""
+    },
+    {
+        "split": "in_progress",
+        "category": "Marketing",
+        "body_header": "Website redesign",
+        "body_content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "progress": [
+            3,
+            3
+        ],
+        "users": [
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"}
+        ],
+        "priotity": [
+            {
+                "img": "assets/img/high_priotity.png",
+                "priotity": "urgent",
+                "img_white":"assets/img/Prio-urgent-white.png"
+            }
+        ],
+        "date": "2023-02-23",
+        "subtasks": ""
+    },
+    {
+        "split": "in_progress",
+        "category": "Backoffice",
+        "body_header": "Test mit Subtasks",
+        "body_content": "Test mit Subtasks",
+        "progress": "",
+        "users": [
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"}
+        ],
+        "priotity": [
+            {
+                "img": "assets/img/medium_priotity.png",
+                "priotity": "medium",
+                "img_white":"assets/img/Prio-medium-white.png"
+            }
+        ],
+        "date": "2023-04-09",
+        "subtasks": [
+            {
+                "subtaskName": "Hoffen das es Klappt",
+                "status": "undone"
+            },
+            {
+                "subtaskName": "Test",
+                "status": "undone"
+            },
+            {
+                "subtaskName": "Träumen",
+                "status": "undone"
+            }
+        ]
+    },
+    {
+        "split": "to_do",
+        "category": "Media",
+        "body_header": "Test ",
+        "body_content": "Test 2",
+        "progress": "",
+        "users": [
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"},
+            {"userShort":"PD","userFullName":"Pascal Dietz"}
+        ],
+        "priotity": [
+            {
+                "img": "assets/img/low_priotity.png",
+                "priotity": "low",
+                "img_white":"assets/img/Prio-low-white.png"
+            }
+        ]
+    }
+]

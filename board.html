@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="js/mini_backend.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/join_logo.svg">
+    <link rel="stylesheet" href="css/header_nav.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/board_add_task.css">
+    <script src="js/include.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/add_task_and_board.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/login.js"></script>
+
+    <script src="assets/templates/board_template.js"></script>
+    <title>Board | Join</title>
+</head>
+
+<body onload="init()" ; onclick="closeLogoutMenu()">
+    <div w3-include-html="assets/templates/header.html"></div>
+    <div w3-include-html="assets/templates/nav.html"></div>
+    <div class="board-section" id="board-section">
+        <div class="board-header">
+            <div class="headline-mobile d-none">Kanban Project Management Tool</div>
+            <div class="board-add-task">
+                <h2>Board</h2>
+                <img onclick="openAddTask()" class="add-task-btn-mobile hide-content" src="assets/img/add_task_mob.svg" alt="">
+            </div>
+            <div class="search-container">
+                <div class="search-box"><input type="text" placeholder="Find Task" onkeyup="findTasks()" id="findTask">
+                    <div class="dividing-line"></div>
+                    <div class="search-icon"><img src="assets/img/magnifier.png" alt=""></div>
+                </div>
+                <button class="add-task" onclick="openAddTask()">Add task +</button>
+            </div>
+
+        </div>
+
+        <div class="board">
+            <div class="splits">
+                <div class="splits-head">
+                    <h3>To Do</h3>
+                    <div class="add_plus" onclick="openAddTask()">+</div>
+                </div>
+                <div class="drop-ground" id="to_do">
+                </div>
+            </div>
+            <div class="splits">
+                <div class="splits-head">
+                    <h3>In Progress</h3>
+                    <div class="add_plus" onclick="openAddTask()">+</div>
+                </div>
+                <div class="drop-ground" id="in_progress"></div>
+            </div>
+            <div class="splits">
+                <div class="splits-head">
+                    <h3>Awaiting Feedback</h3>
+                    <div class="add_plus" onclick="openAddTask()">+</div>
+                </div>
+                <div class="drop-ground" id="awaiting_feedback"></div>
+            </div>
+            <div class="splits">
+                <div class="splits-head">
+                    <h3>Done</h3>
+                    <div class="add_plus" onclick="openAddTask()">+</div>
+                </div>
+                <div class="drop-ground" id="done"></div>
+            </div>
+        </div>
+    </div>
+    <div class="board-bottom"></div>
+    <div id="popUp">
+    </div>
+</body>
+
+</html>

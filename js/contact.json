@@ -1,0 +1,87 @@
+[
+    {
+        "id": 0,
+        "lastName": "Alpha",
+        "firstName": "Juliett",
+        "email": "ajuliett@gmail.com",
+        "phone": "+41 245 97942",
+        "color": "red"
+    }, {
+        "id": 1,
+        "lastName": "Bravo",
+        "firstName": "Romeo",
+        "email": "bromeo@outlook.com",
+        "phone": "+14 525 34324",
+        "color": "blue"
+    }, {
+        "id": 2,
+        "lastName": "Bravo",
+        "firstName": "Whiskey",
+        "email": "braw@gmail.com",
+        "phone": "+14 525 77324",
+        "color": "green"
+    }, {
+        "id": 3,
+        "lastName": "Charlie",
+        "firstName": "Victor",
+        "email": "chvictor@gmail.com",
+        "phone": "+17 871 12358",
+        "color": "purple"
+    }, {
+        "id": 4,
+        "lastName": "Kilo",
+        "firstName": "Foxtrot",
+        "email": "kilofox@outlook.com",
+        "phone": "+17 814 55243",
+        "color": "orange"
+    }, {
+        "id": 5,
+        "lastName": "Kilo",
+        "firstName": "Romeo",
+        "email": "kiloro@gmx.com",
+        "phone": "+48 878 62243",
+        "color": "green"
+    }, {
+        "id": 6,
+        "lastName": "Sierra",
+        "firstName": "Yankee",
+        "email": "sierray@gmail.com",
+        "phone": "+67 878 85243",
+        "color": "aqua"
+    }, {
+        "id": 7,
+        "lastName": "Sierra",
+        "firstName": "Oscar",
+        "email": "sierraoo@outlook.com",
+        "phone": "+87 845 85243",
+        "color": "orange"
+    }, {
+        "id": 8,
+        "lastName": "Sierra",
+        "firstName": "Lima",
+        "email": "sierrali@gmail.com",
+        "phone": "+75 683 85243",
+        "color": "red"
+    }, {
+        "id": 9,
+        "lastName": "Tango",
+        "firstName": "Romeo",
+        "email": "tangoro@gmail.com",
+        "phone": "+15 832 85243",
+        "color": "aqua"
+    }, {
+        "id": 10,
+        "lastName": "Zulu",
+        "firstName": "Oscar",
+        "email": "ozulu@gmx.com",
+        "phone": "+17 679 37797",
+        "color": "green"
+    }, {
+        "id": 11,
+        "lastName": "Zulu",
+        "firstName": "Juliett",
+        "email": "jzulu@outlook.com",
+        "phone": "+17 875 58744",
+        "color": "purple"
+    }
+]
