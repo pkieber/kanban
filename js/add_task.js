@@ -4,10 +4,10 @@ let tasks = [];
  * 
  */
 async function init() {
-    includeHTML();
-    loadNotes();
+    await includeHTML();
+    await loadNotes();
+    await loadContacts();
     addAssignedToList();
-    loadContacts();
     setDateToday();
 }
 /**
