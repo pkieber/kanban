@@ -58,7 +58,7 @@ function openEditContactFormHTML(selectedContact) {
             <div class="contact-form-right">
             <div id="selectedContactColor" class="contact-letters big-letters margin-letters" style="background-color: ${selectedContact.color}">${selectedContact.lastName.charAt(0)} ${selectedContact.firstName.charAt(0)}</div>
             <div class="contact-input-container margin-top">
-                <div onclick="closeForm()" class="icon-top-right" title="close form">
+                <div onclick="closeFormById('contactForm')" class="icon-top-right" title="close form">
                     <img class="contact-cancel-icon" src="./assets/img/contact-cancel-icon.svg" alt="#">
                     <img class="contact-cancel-icon-mobile hide-content" src="assets/img/x_ixon.png" alt="">
                 </div>
@@ -175,7 +175,7 @@ function openAddTaskContactFormHTML() {
         </div>
         <div class="add-form-right">
             <div class="contact-input-container">
-                <div onclick="closeAddTaskForm()" class="icon-top-right" title="close form">
+                <div onclick="closeFormById('formTaskContainer')" class="icon-top-right" title="close form">
                     <img class="contact-cancel-icon-mobile" src="./assets/img/contact-cancel-icon.svg" alt="#">
                 </div>
                 <div>
@@ -220,7 +220,7 @@ function openAddTaskContactFormHTML() {
                         </div>
                 </div>
                 <div class="contact-form-buttons btn-centered">
-                    <button type="button" onclick="closeAddTaskForm()" class="contact-cancel-btn" title="close form">
+                    <button type="button" onclick="closeFormById('formTaskContainer')" class="contact-cancel-btn" title="close form">
                         <p>Cancel</p>
                         <img class="contact-create-icon" src="assets/img/iconoir_cancel.svg" alt="#">
                     </button>

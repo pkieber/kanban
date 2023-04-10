@@ -172,7 +172,8 @@ function updateContact() {
     backend.setItem('contacts', JSON.stringify(contacts));
     updateContactList();
     updateContactSelection();
-    closeForm();
+    const contactForm = document.getElementById("contactForm");
+    contactForm.remove(); // close form again
 }
 
 
@@ -224,7 +225,7 @@ function editContact(i) {
  * @param {*} i 
  */
 function deleteSelectedContact(i) {
-    if (i < 7) {
+    if (i < 3) {
         alert("Test data cannot be deleted. Thanks for testing.");
         return;
     }
@@ -236,47 +237,58 @@ function deleteSelectedContact(i) {
 
 
 /**
- * Open contact form to add new task
- * @param {*} i 
+ * Open contact form to add new task with assigned contact
+ * @param {string} userShort - The short name of the contact to assign the task to
  */
 async function addTaskContact(userShort) {
     const formTaskContainer = document.getElementById("formContainer");
+    if (!formTaskContainer) {
+        console.error('Error: formContainer is null or undefined.');
+        return;
+    }
     formTaskContainer.innerHTML += openAddTaskContactFormHTML();
     addAssignedToList();
     await loadNotes();
     setDateToday();
+    checkAssignedTo(userShort);
+}
+
+
+/**
+ * Check assigned-to checkbox for the given userShort
+ * @param {string} userShort - The short name of the contact to check the assigned-to checkbox for
+ */
+function checkAssignedTo(userShort) {
     for (let i = 0; i < contacts.length; i++) {
-        if(userShort == document.getElementById('assigned-to-' + i).value.toLowerCase()){
-            document.getElementById('assigned-to-' + i).checked = true;
+        const assignedTo = document.getElementById('assigned-to-' + i);
+        if (assignedTo && userShort == assignedTo.value.toLowerCase()) {
+            assignedTo.checked = true;
         }
     }
 }
 
 
 /**
- * Close contact form
+ * Close forms by ID (contactForm, formTaskContainer)
  */
-function closeForm() {
-    const contactForm = document.getElementById("contactForm");
-    contactForm.remove();
+function closeFormById(formId) {
+    const form = document.getElementById(formId);
+    form.remove();
 }
 
 
 /**
- * Close contact form to add new task
+ * Loads tasks from server (used for add task-popup)
  */
-function closeAddTaskForm() {
-    const contactForm = document.getElementById("formTaskContainer");
-    contactForm.remove();
-}
-
-
 async function loadNotes() {
     await downloadFromServer();
     tasks = JSON.parse(backend.getItem('allTasks')) || [];
 }
 
 
+/**
+ * Saves tasks to server (used for add task-popup)
+ */
 async function saveNotes() {
     let tasksAsJson = JSON.stringify(tasks);
     await backend.setItem('allTasks', tasksAsJson);
