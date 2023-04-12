@@ -85,6 +85,12 @@ h1 {
     border-radius: 20px;
 }
 
+.selected-contact-box {
+    background-color: #2A3647;
+    color: white;
+    border-radius: 20px;
+}
+
 .contact-details {
     display: flex;
     flex-direction: column;

@@ -1,6 +1,7 @@
 let contacts = [];
 let newContact = [];
 let tasks = [];
+let previouslySelectedContact = null;
 
 
 /**
@@ -115,6 +116,20 @@ function showContactDetails(i) {
     let userShort = selectedContact['firstName'].charAt(0).toLowerCase() + selectedContact['lastName'].charAt(0).toLowerCase()
     contactSelection.innerHTML += showContactDetailsHTML(selectedContact, i, userShort);
     document.getElementById('contactOverlay').classList.add('show-contact-selection-overlay');
+}
+
+
+/**
+ * Highlights a selected contact by giving it a different color.
+ * @param {*} i 
+ */
+function hightlightContact(i) {
+    let currentHighlightContact = document.getElementById('highlight-' + i);
+    currentHighlightContact.classList.add('selected-contact-box');
+    if (previouslySelectedContact !== null) {
+        previouslySelectedContact.classList.remove('selected-contact-box');
+    }
+    previouslySelectedContact = currentHighlightContact;
 }
 
 

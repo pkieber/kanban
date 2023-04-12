@@ -33,6 +33,7 @@ function showLogout() {
  */
 function closeLogoutMenu() {
     let logOut = document.getElementById('popup-menu');
+
     logOut.classList.add('d-none');
 }
 

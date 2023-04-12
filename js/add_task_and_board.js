@@ -55,7 +55,6 @@ function checkPrioity() {
     if (priotity_low) {
         prio = "assets/img/low_priotity.png";
         priotity = 'low';
-
     }
     else if (priotity_medium) {
         prio = "assets/img/medium_priotity.png";

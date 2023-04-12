@@ -1,8 +1,14 @@
-function generateContactList(contact, j) {
+/**
+ * Shows list of all contacts in alphabetical order.
+ * @param {*} contact 
+ * @param {*} i 
+ * @returns 
+ */
+function generateContactList(contact, i) {
     return `
-        <div onclick="showContactDetails(${j})" class="contact-list-box" title="show contact details">
-            <div id="contactColor" class="contact-letters small-letters" style="background-color: ${contact.color}">
-                ${contact.firstName.charAt(0).toUpperCase()}${contact.lastName.charAt(0).toUpperCase()}
+    <div id="highlight-${i}" onclick="showContactDetails(${i}); hightlightContact(${i})" class="contact-list-box" title="show contact details">
+        <div id="contactColor" class="contact-letters small-letters" style="background-color: ${contact.color}">
+                ${contact.lastName.charAt(0).toUpperCase()}${contact.firstName.charAt(0).toUpperCase()}
             </div>
             <div class="contact-details">
                 <div class="contact-name">${contact.lastName} ${contact.firstName}</div>
@@ -13,6 +19,11 @@ function generateContactList(contact, j) {
 }
 
 
+/**
+ * Shows headline of first letters sorted alphabetically.
+ * @param {*} firstLetter 
+ * @returns 
+ */
 function showContactFirstLettersHTML(firstLetter) {
     return `
             <h2 class="contact-index">${firstLetter.toUpperCase()}</h2>
@@ -21,10 +32,17 @@ function showContactFirstLettersHTML(firstLetter) {
 }
 
 
+/**
+ * Shows selected contact with all details. 
+ * @param {*} selectedContact 
+ * @param {*} i 
+ * @param {*} userShort 
+ * @returns 
+ */
 function showContactDetailsHTML(selectedContact, i, userShort) {
     return `
         <div onclick="closeContactOverlay()" class="close-btn close-btn-overlay">
-            <img class="close-icon" src="./assets/img/arrow_left.svg" alt="#">
+            <img class="close-icon" title="back" src="./assets/img/arrow_left.svg" alt="#">
         </div>
         <div class="contact-selection">
             <div id="selectedContactColor" class="contact-letters big-letters" style="background-color: ${selectedContact.color}">${selectedContact.lastName.charAt(0)} ${selectedContact.firstName.charAt(0)}</div>
@@ -47,6 +65,11 @@ function showContactDetailsHTML(selectedContact, i, userShort) {
 }
 
 
+/**
+ * Shows contact form to edit contacts.
+ * @param {*} selectedContact 
+ * @returns 
+ */
 function openEditContactFormHTML(selectedContact) {
     return `
         <div id="contactForm" class="contact-form-overlay">
@@ -92,6 +115,10 @@ function openEditContactFormHTML(selectedContact) {
 }
 
 
+/**
+ * Shows contact form to add new tasks.
+ * @returns 
+ */
 function openAddTaskContactFormHTML() {
     return `
     <div>

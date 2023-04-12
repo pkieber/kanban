@@ -6,9 +6,9 @@
  */
 function loadCardFullText(task_name, choiceTask) {
     return `
-    <div class="popUp-background">
-            <div class="popUp-content">
-                <div class="popUp-close" onclick="closePopUp(${choiceTask})">x</div>
+    <div class="popUp-background" id="close-popup${choiceTask}" onclick="closePopup(${choiceTask})">
+            <div class="popUp-content" onclick="event.stopPropagation()">
+                <div class="popUp-close" id="close-task"><img class="popup-img" src="./assets/img/xicon.png" onclick="closePopUp(${choiceTask})"></div>
                 <div class="card-head" style="background-color: var(--${task_name[choiceTask]['category'].toLowerCase()});">${task_name[choiceTask]['category']}</div>
                 <h2>${task_name[choiceTask]['body_header']}</h2>
                 <p>${task_name[choiceTask]['body_content']}</p>
@@ -21,7 +21,7 @@ function loadCardFullText(task_name, choiceTask) {
                 <div class="makeRow"><b class="margin10">Priority: </b><p class="prio-${task_name[choiceTask]['priotity'][0]['priotity']}-popUp">${task_name[choiceTask]['priotity'][0]['priotity']} <img src="${tasks[choiceTask]['priotity'][0]['img_white']}"></p></div>
                 <div class="makeRow"><b class="margin10">Assigned To: </b></div>
                 <div class="users makeColumn" id="userSection"></div>
-                <div class="space"><img class="changeIcon" onclick="editTask(${choiceTask})" src="./assets/img/edit_icon.svg"<div class="put_it_right"><img class="trash-icon" src="./assets/img/empty-trash-32.png" onclick=delCard(${choiceTask})></div></div>
+                <div class="space"><img class="changeIcon" onclick="editTask(${choiceTask})" src="./assets/img/edit_pencil.svg"<div class="put_it_right"><img class="trash-icon" src="./assets/img/empty-trash-32.png" onclick=delCard(${choiceTask})></div></div>
             </div>
         </div>    
     `
@@ -35,7 +35,7 @@ function loadCardFullText(task_name, choiceTask) {
  */
 function loadCardBoardText(tasks_name, id, catgoryLow) {
     return `
-    <div class="card" id=card${id} draggable="true" ondragstart="startDragging(${id})" ondragend="endDragging(${id})" onclick="checkWhichMenu(${id})">
+    <div class="card" id=card${id} draggable="true" ondragstart="startDragging(${id})" ondragend="endDragging(${id})" onclick="checkWhichMenu(${id}); event.stopPropagation();">
         
             <div class="card-content">                                      
                 <div class="card-head" style="background-color: var(--${catgoryLow});">
@@ -58,7 +58,8 @@ function loadCardBoardText(tasks_name, id, catgoryLow) {
     
             <div>
                 <div class="popUpWish d-none" id="contextMenu${id}">
-                    <div class="headContextMenu"><h3>Choice your Wish</h3><p><b>X</b></p></div>
+                    <div class="headContextMenu"><h3>Choose your wish</h3><img onclick="closeHeadContextMenu(${id}); event.stopPropagation(); " src="./assets/img/xicon.png"></div>
+                    <img src="./assets/img/summary_underline.svg">
                     <div onclick="changeSplit('to_do',${id})">
                         <p>Change to <b>To Do</b></p>
                     </div>
@@ -86,8 +87,8 @@ function loadCardBoardText(tasks_name, id, catgoryLow) {
  * @returns {string} The HTML code for the popup for adding a new task.
  */
 function loadAddTaskTmp() {
-    return `<div class="popUp-background">
-    <div class="popUp-content_add_task" id="popup-add-task">
+    return `<div class="popUp-background"  id="popUp-background" onclick="closePopupAddTask()">
+    <div class="popUp-content_add_task" id="popup-add-task"  onclick="event.stopPropagation()">
     <div class="headerPopUp"><h2>Add Task</h2><div style="cursor: pointer;" onclick="closePopUpAddTask()">x</div></div>
 <form onsubmit="addTask();return false">
 <div class="content-container">
@@ -277,8 +278,8 @@ function loadPrioIMGWithText(pri, prioIMG) {
 }
 
 function loadEditAddTaskTmp(id) {
-    return `<div class="popUp-background">
-    <div class="popUp-content_add_task" id="popup-add-task">
+    return `<div class="popUp-background" id="close-add-task" onclick="closeAddtask()">
+    <div class="popUp-content_add_task" id="popup-add-task" onclick="event.stopPropagation()">
     <div class="headerPopUp"><h2>Add Task</h2><div style="cursor: pointer;" onclick="closePopUpAddTask()">x</div></div>
 <form onsubmit="editAddTask(${id});return false">
 <div class="content-container">
@@ -411,3 +412,6 @@ function loadEditAddTaskTmp(id) {
 <script>setDateToday();</script>
 `
 }
+
+
+

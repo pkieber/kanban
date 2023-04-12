@@ -4,7 +4,7 @@ let tasks = [];
  * 
  */
 async function init() {
-    await includeHTML();
+    includeHTML();
     await loadNotes();
     await loadContacts();
     addAssignedToList();
