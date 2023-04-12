@@ -59,9 +59,11 @@ function showContactDetailsHTML(selectedContact, i, userShort) {
         <div class="contact-email">${selectedContact.email}</div>
         <h4>Phone</h4>
         <div class="contact-name">${selectedContact.phone}</div>
-        <div class="icon-bottom-right" title="edit contact info" onclick="editContact(${i})"><img class="edit-pencil-icon" src="./assets/img/edit_pencil.svg"></div>
-        <div title="delete contact"><img onclick="deleteSelectedContact(${i})" class="contact-trash-icon" src="./assets/img/empty-trash-32.png"></div>
-    `;
+        <div class="contact-edit-tools">
+            <div title="delete contact"><img onclick="deleteSelectedContact(${i})" class="contact-trash-icon" src="./assets/img/empty-trash-32.png"></div>
+            <div class="icon-bottom-right" title="edit contact info" onclick="editContact(${i})"><img class="edit-pencil-icon" src="./assets/img/edit_pencil.svg"></div>
+        </div>
+        `;
 }
 
 
