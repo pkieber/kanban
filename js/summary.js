@@ -6,6 +6,7 @@ async function initSummary() {
     showGreetDesktop();
 }
 
+
 /**
  * Loads all tasks from server and dispays their count.
  */
@@ -14,6 +15,7 @@ async function loadAllTasks() {
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
     showAllCounts();
 }
+
 
 /*Show counts of board on summary*/
 function showAllCounts() {
@@ -25,6 +27,7 @@ function showAllCounts() {
     showCountUrgent();
     showDlDate();
 }
+
 
 /**
  * This function sets a greeting message on a mobile device based on the current time and calls two other functions to display the current user and mobile greeting.
@@ -44,6 +47,7 @@ function showGreetMobile() {
     mobileGreet();
 }
 
+
 /**
  * This function shows/hides mobile greeting and main containers based on the screen width and referrer, with a delay of 2.5 seconds.
  */
@@ -62,6 +66,7 @@ function mobileGreet() {
         }
     }
 }
+
 
 /**
  * This function displays the count of all tasks in the board.
@@ -90,8 +95,7 @@ function showCountInProgress() {
 
 
 /**
- * Counts the number of tasks awaiting feedback and displays the count value.
- * 
+ * Counts the number of tasks awaiting feedback and displays the count value. * 
  * @returns The count value of tasks awaiting feedback.
  */
 function showCountAwaitFeedback() {
@@ -106,8 +110,7 @@ function showCountAwaitFeedback() {
 }
 
 /**
- * Counts the number of urgent tasks and displays the count value.
- * 
+ * Counts the number of urgent tasks and displays the count value. * 
  * @returns The count value of urgent tasks.
  */
 function showCountUrgent() {
@@ -122,8 +125,7 @@ function showCountUrgent() {
 }
 
 /**
- * Counts the number of to_do tasks and displays the count value.
- * 
+ * Counts the number of to_do tasks and displays the count value. * 
  * @returns The count value of to_do tasks.
  */
 function showCountToDo() {
@@ -138,8 +140,7 @@ function showCountToDo() {
 }
 
 /**
- * Counts the number of done tasks and displays the count value.
- * 
+ * Counts the number of done tasks and displays the count value. * 
  * @returns The count value of done tasks.
  */
 function showCountDone() {
@@ -154,10 +155,10 @@ function showCountDone() {
 }
 /* End of: Show counts of board on summary*/
 
+
 /**
  * Finds the earliest date among all the dates in the "allTasks" array, converts it to a formatted date string,
- * and sets it as the innerHTML of an HTML element with the ID "dlDate".
- * 
+ * and sets it as the innerHTML of an HTML element with the ID "dlDate". * 
  * @returns {string} The formatted earliest date as a string.
  */
 function showDlDate() {
@@ -172,6 +173,7 @@ function showDlDate() {
     const formattedDate = date.toLocaleDateString("en-US", options);
     return document.getElementById('dlDate').innerHTML = formattedDate;
 }
+
 
 /**
  * This function sets a greeting message on a desktop device based on the current time and calls the functions to display the current user.
@@ -191,6 +193,7 @@ async function showGreetDesktop() {
     showCurrentUser();
 }
 
+
 /**
  * This function displays the current user on desktop and mobile.
  */
@@ -198,6 +201,7 @@ async function showCurrentUser() {
     document.getElementById('username').innerHTML = currentUser['name'];
     document.getElementById('usernameMobile').innerHTML = currentUser['name'];
 }
+
 
 /**
  * This function displays the element overDivMobile for 3 seconds on mobile.

@@ -15,9 +15,9 @@ function login() {
 
 
 /**
- * Checks the validity of the current user's login credentials and redirects to the summary page if valid. 
- * @param {string} invalidLogin - The error message element to display if the login is invalid.
- * @param {string} hideUnderline - The element to hide when displaying the error message.
+ * Checks the validity of the current user's login data and redirects to the summary page if valid. 
+ * @param {HTMLElement} invalidLogin - The HTML element to display an error message if login is invalid.
+ * @param {HTMLElement} hideUnderline - The HTML element to hide if login is invalid.
  */
  async function checkUser(invalidLogin, hideUnderline) {
     if (currentUser) {
@@ -25,13 +25,23 @@ function login() {
         checkRememberMe(currentUser);
         window.location.href = 'summary.html';
     } else {
-        hideUnderline.classList.add('d-none');
+        returnInvalidLogin(invalidLogin, hideUnderline);
+    }
+}
+
+
+/**
+ * If the login data are invalid then show text information.
+ * @param {*} invalidLogin - The error message element to display if the login is invalid.
+ * @param {*} hideUnderline - The element to hide when displaying the error message.
+ */
+function returnInvalidLogin(invalidLogin, hideUnderline) {
+    hideUnderline.classList.add('d-none');
         invalidLogin.classList.remove('d-none');
         setTimeout(function() {
             invalidLogin.classList.add('d-none');
             hideUnderline.classList.remove('d-none');
         }, 3000);
-    }
 }
 
 
@@ -117,16 +127,25 @@ async function setNewPassword() {
 
     if (newPassword == confirmPassword) {
         users[index]['password'] = newPassword;
-        // users.push({'name': name, 'email': email.toLowerCase(), 'password' : password});
         await backend.setItem('users', JSON.stringify(users));
     } else {
-        hideSpan.classList.add('d-none');
+        invalidNewPasswordDatas(hideSpan, showMessage);
+    }
+}
+
+
+/**
+ * Shows the information that the entered data was invalid.
+ * @param {*} hideSpan - Hides the main text
+ * @param {*} showMessage - Shows the information that the data is invlaid
+ */
+function invalidNewPasswordDatas(hideSpan, showMessage) {
+    hideSpan.classList.add('d-none');
         showMessage.classList.remove('d-none');
         setTimeout(function() {
         hideSpan.classList.remove('d-none');
         showMessage.classList.add('d-none');
         }, 3000);
-    }
 }
 
 

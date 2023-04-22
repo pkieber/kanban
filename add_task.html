@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/header_nav.css">
     <link rel="stylesheet" href="css/add_task.css">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
-    <script src="js/data.js"></script>
     <script src="js/include.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/add_task.js"></script>
     <script src="assets/templates/board_template.js"></script>
     <script src="js/add_task_and_board.js"></script>
@@ -54,29 +54,40 @@
                     </div>
                     <div class="selection-container prevent-select">
                         <label>Category</label>
-                        <div class="select-wrapper" onclick="openDropdown('category-choices')">
+                        <div id="new-category" class="new-cat input-new-cat d-none">
+                            <input id="new-category-input"type="name" placeholder="Category Name ...">
+                            <div id="category-added-cont" class="category-added-cont d-none" >New Category added!</div>
+                            <div id="category-required" class="category-added-cont d-none">Please enter a category!</div>
+                            <div class="new-category-icons">
+                                <input id="category-color" type="color">
+                                <img src="./assets/img/checkmark.png" alt="#" onclick="addColorCategory()">
+                                <img src="./assets/img/cancel.png" alt="#" onclick="closeNewCategory()">
+                            </div>
+                        </div>
+                        <div class="select-wrapper"  id="select-wrapper"  onclick="openDropdown('category-choices')">
                             <div class="sector_top">
                                 <p id="category-header">Select your Category</p><img src="./assets/img/arrow_down.png">
                             </div>
                             <div class="category-choices d-none" id="category-choices">
+                                <div class="category" onclick="openAddNewCategory('category-choices')">New Category<img class="new-category-img" src="assets/img/add_task_mob.svg"></div>
                                 <div class="category" onclick="changeCategoryHeader('Marketing')">
                                     <div id="marketing">Marketing </div>
                                     <div class="circle" style="background: #0038ff;"></div>
                                 </div>
                                 <div class="category" onclick="changeCategoryHeader('Media')">
-                                    <div>Media </div>
+                                    <div id="media">Media </div>
                                     <div class="circle" style="background: #ffc702;"></div>
                                 </div>
                                 <div class="category" onclick="changeCategoryHeader('Backoffice')">
-                                    <div>Backoffice </div>
+                                    <div id="backoffice">Backoffice </div>
                                     <div class="circle" style="background: #1FD7C1;"></div>
                                 </div>
                                 <div class="category" onclick="changeCategoryHeader('Design')">
-                                    <div>Design </div>
+                                    <div id="design">Design </div>
                                     <div class="circle" style="background:  #ff7a00;"></div>
                                 </div>
                                 <div class="category" onclick="changeCategoryHeader('Sales')">
-                                    <div>Sales </div>
+                                    <div id="sales">Sales </div>
                                     <div class="circle" style="background: #fc71ff;"></div>
                                 </div>
                             </div>

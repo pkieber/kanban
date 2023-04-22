@@ -262,6 +262,19 @@ a {
     justify-content: space-between;
 }
 
+.headerPopUp img {
+    height: 25px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.headerPopUp img:hover {
+    background-color: #94d5f0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: all 225ms ease-in-out;
+}
+
 .popUp-background {
     height: 100vh;
     width: 100vw;
@@ -344,7 +357,7 @@ a {
 }
 
 .popup-img {
-    height: 30px;
+    height: 25px;
     cursor: pointer;
     padding: 10px;
 }
@@ -410,6 +423,11 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#board-container {
+    width: 100vw;
+    height: 100vh;
 }
 
 @media(max-width: 1500px) {

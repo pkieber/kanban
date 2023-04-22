@@ -63,7 +63,7 @@ function showContactDetailsHTML(selectedContact, i, userShort) {
             <div title="delete contact"><img onclick="deleteSelectedContact(${i})" class="contact-trash-icon" src="./assets/img/empty-trash-32.png"></div>
             <div class="icon-bottom-right" title="edit contact info" onclick="editContact(${i})"><img class="edit-pencil-icon" src="./assets/img/edit_pencil.svg"></div>
         </div>
-        `;
+    `;
 }
 
 
@@ -98,7 +98,7 @@ function openEditContactFormHTML(selectedContact) {
                         <input class="contact-input-field input-email-img" type="email" placeholder="Email" id="email" name="email" value="${selectedContact.email}" required>
                     </div>
                     <div class="form-group">
-                        <input class="contact-input-field input-phone-img" type="tel" placeholder="Phone" id="phone" name="phone" value="${selectedContact.phone}" required>
+                        <input class="contact-input-field input-phone-img" type="tel" placeholder="Phone" id="phone" name="phone" value="${selectedContact.phone}" pattern="[+0-9\s]+" required>
                     </div>
                     <div class="form-group">
                         <input class="p-none"type="color" id="color" name="color" value="${selectedContact.color}" required>
@@ -113,6 +113,7 @@ function openEditContactFormHTML(selectedContact) {
             </div>
             </div>
         </div>
+        
     `;
 }
 
@@ -138,11 +139,22 @@ function openAddTaskContactFormHTML() {
                 </div>
                 <div class="selection-container prevent-select">
                     <label>Category</label>
-                    <div class="select-wrapper" onclick="openDropdown('category-choices')">
+                    <div id="new-category" class="new-cat input-new-cat d-none">
+                    <input id="new-category-input" type="name" placeholder="Category Name ...">
+                    <div id="category-added-cont" class="category-added-cont d-none" >New Category added!</div>
+                    <div id="category-required" class="category-added-cont d-none">Please enter a category!</div>
+                    <div class="new-category-icons">
+                    <input id="category-color" type="color" value="#2a3647">
+                    <img src="./assets/img/checkmark.png" alt="#" onclick="addColorCategory()">
+                    <img src="./assets/img/cancel.png" alt="#" onclick="closeNewCategory()">
+                </div>
+                </div>
+                    <div class="select-wrapper"  id="select-wrapper"  onclick="openDropdown('category-choices')">
                         <div class="sector_top">
                             <p id="category-header">Select your Category</p><img src="./assets/img/arrow_down.png">
                         </div>
                         <div class="category-choices d-none" id="category-choices">
+                        <div class="category" onclick="openAddNewCategory('category-choices')">New Category<img class="new-category-img" src="assets/img/add_task_mob.svg"></div>
                             <div class="category" onclick="changeCategoryHeader('Marketing')">
                                 <div id="marketing">Marketing </div>
                                 <div class="circle" style="background: #0038ff;"></div>

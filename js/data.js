@@ -1,5 +1,6 @@
 let users = [];
 let currentUser;
+let currentTaskCard;
 
 
 // Body onload function for legal notice and help site
@@ -33,7 +34,6 @@ function showLogout() {
  */
 function closeLogoutMenu() {
     let logOut = document.getElementById('popup-menu');
-
     logOut.classList.add('d-none');
 }
 
@@ -122,3 +122,20 @@ function checkRememberMeData() {
     }
 }
 
+
+/**
+ * Checks the current status of the task card.
+ * @returns {string} - The current status of the task card, either 'to_do' or the value of 
+ */
+function checkStatus() {
+    let status;
+    try {
+        status = currentTaskCard;
+    } catch (e) {}
+    
+    if(status) {
+        return status;
+    } else {
+        return 'to_do'
+    }
+}

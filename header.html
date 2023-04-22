@@ -1,0 +1,16 @@
+<header>
+    <div class="headline">Kanban Project Management Tool</div>
+    <div class="header-logo">
+        <img src="assets/img/join_logo.svg" alt="Join-logo">
+    </div>
+    <div class="header-nav">
+        <img class="add-btn-mobile d-none" src="assets/img/add_task_btn_mob.svg" alt="add-button">
+        <a class="help-icon" href="help.html"><img class="header-help-icon" src="assets/img/Help-Icon.png"></a>
+        <img class="header-user-img" src="assets/img/user_guest.png" onclick="showLogout();dontClose(event)">
+    </div>
+    <div class="logout-menu d-none" id="popup-menu" onclick="dontClose(event)">
+        <a href="help.html"><span class="hide-content">Help</span></a>
+        <a href="legal_notice.html"><span href="legal_notice.html" class="hide-content">Legal notice</span></a>
+        <span onclick="logOut()">Log out</span>
+    </div>
+</header>
