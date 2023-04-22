@@ -1,6 +1,6 @@
 let jsonFromServer = {};
 let BASE_SERVER_URL;
-setURL('https://gruppenarbei-join-460.developerakademie.net/smallest_backend_ever');
+setURL('https://patrick-kieber.developerakademie.net/smallest_backend_ever');
 
 const backend = {
     setItem: function(key, item) {
@@ -25,6 +25,7 @@ window.onload = async function() {
 async function downloadFromServer() {
     let result = await loadJSONFromServer();
     jsonFromServer = JSON.parse(result);
+    console.log('Loaded', result);
 }
 
 function setURL(url) {
