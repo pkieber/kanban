@@ -11,10 +11,10 @@
         "users": [
             {"userShort":"PD","userFullName":"Pascal Dietz"}
         ],
-        "priotity": [
+        "priority": [
             {
-                "img": "assets/img/low_priotity.png",
-                "priotity": "low",
+                "img": "assets/img/low_priority.png",
+                "priority": "low",
                 "img_white":"assets/img/prio-low-white.png"
             }
         ],
@@ -32,11 +32,11 @@
             {"userShort":"PD","userFullName":"Pascal Dietz"},
             {"userShort":"PD","userFullName":"Pascal Dietz"}
         ],
-        "priotity": [
+        "priority": [
             {
-                "img": "assets/img/medium_priotity.png",
-                "priotity": "medium",
-                "img_white":"assets/img/Prio-medium-white.png"
+                "img": "assets/img/medium_priority.png",
+                "priority": "medium",
+                "img_white":"assets/img/prio-medium-white.png"
             }
         ],
         "date": "2023-02-26",
@@ -52,11 +52,11 @@
             {"userShort":"PD","userFullName":"Pascal Dietz"},
             {"userShort":"PD","userFullName":"Pascal Dietz"}
         ],
-        "priotity": [
+        "priority": [
             {
-                "img": "assets/img/low_priotity.png",
-                "priotity": "low",
-                "img_white":"assets/img/Prio-low-white.png"
+                "img": "assets/img/low-priority.png",
+                "priority": "low",
+                "img_white":"assets/img/prio-low-white.png"
             }
         ],
         "date": "2023-03-28",
@@ -73,11 +73,11 @@
             {"userShort":"PD","userFullName":"Pascal Dietz"},
             {"userShort":"PD","userFullName":"Pascal Dietz"}
         ],
-        "priotity": [
+        "priority": [
             {
-                "img": "assets/img/medium_priotity.png",
-                "priotity": "medium",
-                "img_white":"assets/img/Prio-medium-white.png"
+                "img": "assets/img/medium-priority.png",
+                "priority": "medium",
+                "img_white":"assets/img/prio-medium-white.png"
             }
         ],
         "date": "2023-02-28",
@@ -97,11 +97,11 @@
             {"userShort":"PD","userFullName":"Pascal Dietz"},
             {"userShort":"PD","userFullName":"Pascal Dietz"}
         ],
-        "priotity": [
+        "priority": [
             {
-                "img": "assets/img/high_priotity.png",
-                "priotity": "urgent",
-                "img_white":"assets/img/Prio-urgent-white.png"
+                "img": "assets/img/high-priority.png",
+                "priority": "urgent",
+                "img_white":"assets/img/prio-urgent-white.png"
             }
         ],
         "date": "2023-02-23",
@@ -117,11 +117,11 @@
             {"userShort":"PD","userFullName":"Pascal Dietz"},
             {"userShort":"PD","userFullName":"Pascal Dietz"}
         ],
-        "priotity": [
+        "priority": [
             {
-                "img": "assets/img/medium_priotity.png",
-                "priotity": "medium",
-                "img_white":"assets/img/Prio-medium-white.png"
+                "img": "assets/img/medium-priority.png",
+                "priority": "medium",
+                "img_white":"assets/img/prio-medium-white.png"
             }
         ],
         "date": "2023-04-09",
@@ -151,11 +151,11 @@
             {"userShort":"PD","userFullName":"Pascal Dietz"},
             {"userShort":"PD","userFullName":"Pascal Dietz"}
         ],
-        "priotity": [
+        "priority": [
             {
-                "img": "assets/img/low_priotity.png",
-                "priotity": "low",
-                "img_white":"assets/img/Prio-low-white.png"
+                "img": "assets/img/low-priority.png",
+                "priority": "low",
+                "img_white":"assets/img/prio-low-white.png"
             }
         ]
     }

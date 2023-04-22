@@ -1,13 +1,12 @@
 let contactsAddTask = loadContacts();
 let subtasks = [];
-let priotity_urgent = false;
-let priotity_medium = false;
-let priotity_low = true;
+let priority_urgent = false;
+let priority_medium = false;
+let priority_low = true;
 let currentCategory = '';
 let currentColor = '';
 let category;
 let selectedColor;
-
 
 
 /**
@@ -85,7 +84,7 @@ function createNewTaskJson(title, description, due_date, currentSplit, assigned_
         'body_content': description,
         'progress': '',
         'users': assigned_to,
-        'priotity': checkPrioity(),
+        'priority': checkPriority(),
         'date': due_date,
         'subtasks': subtasks
     }
@@ -118,22 +117,22 @@ async function navigateToBoard() {
  * Checks the priority level selected and returns the corresponding image and string.
  * @returns {object[]} - An array with an object containing the priority image, string, and white image.
  */
-function checkPrioity() {
+function checkPriority() {
     let prio;
-    let priotity;
-    if (priotity_low) {
-        prio = "assets/img/low_priotity.png";
-        priotity = 'low';
+    let priority;
+    if (priority_low) {
+        prio = "assets/img/low-priority.png";
+        priority = 'low';
     }
-    else if (priotity_medium) {
-        prio = "assets/img/medium_priotity.png";
-        priotity = 'medium';
+    else if (priority_medium) {
+        prio = "assets/img/medium-priority.png";
+        priority = 'medium';
     }
-    else if (priotity_urgent) {
-        prio = "assets/img/high_priotity.png";
-        priotity = 'urgent';
+    else if (priority_urgent) {
+        prio = "assets/img/high-priority.png";
+        priority = 'urgent';
     }
-    return [{ 'img': prio, 'priotity': priotity, "img_white": "assets/img/Prio-" + priotity + "-white.png" }];
+    return [{ 'img': prio, 'priority': priority, "img-white": "assets/img/prio-" + priority + "-white.png" }];
 }
 
 
@@ -141,35 +140,34 @@ function checkPrioity() {
  * Changes the color of the priority sections based on the selected priority radio button.
  */
 function changeColor() {
-    priotity_urgent = document.getElementById('urgentBtn').checked;
-    priotity_medium = document.getElementById('mediumBtn').checked;
-    priotity_low = document.getElementById('lowBtn').checked;
-
-    checkChangedColor(priotity_urgent, priotity_medium, priotity_low);
+    priority_urgent = document.getElementById('urgentBtn').checked;
+    priority_medium = document.getElementById('mediumBtn').checked;
+    priority_low = document.getElementById('lowBtn').checked;
+    checkChangedColor(priority_urgent, priority_medium, priority_low);
 }
 
 
 /**
  * Updates the priority sections on the page based on which priority has been selected.
- * @param {*} priotity_urgentt - A boolean indicating whether the urgent priority has been selected. 
- * @param {*} priotity_medium - A boolean indicating whether the medium priority has been selected. 
- * @param {*} priotity_low - A boolean indicating whether the low priority has been selected. 
+ * @param {*} priority_urgent - A boolean indicating whether the urgent priority has been selected. 
+ * @param {*} priority_medium - A boolean indicating whether the medium priority has been selected. 
+ * @param {*} priority_low - A boolean indicating whether the low priority has been selected. 
  */
-function checkChangedColor(priotity_urgent, priotity_medium, priotity_low) {
-    if (priotity_urgent) {
-        document.getElementById('urgentSection').innerHTML = loadPrioIMGWithText('Urgent', 'Prio-urgent-white');
-        document.getElementById('mediumSection').innerHTML = loadPrioIMGWithText('Medium', 'Prio-medium');
-        document.getElementById('lowSection').innerHTML = loadPrioIMGWithText('Low', 'Prio-low');
+function checkChangedColor(priority_urgent, priority_medium, priority_low) {
+    if (priority_urgent) {
+        document.getElementById('urgentSection').innerHTML = loadPrioIMGWithText('urgent', 'prio-urgent-white');
+        document.getElementById('mediumSection').innerHTML = loadPrioIMGWithText('medium', 'prio-medium');
+        document.getElementById('lowSection').innerHTML = loadPrioIMGWithText('low', 'prio-low');
     }
-    if (priotity_medium) {
-        document.getElementById('urgentSection').innerHTML = loadPrioIMGWithText('Urgent', 'Prio-urgent');
-        document.getElementById('mediumSection').innerHTML = loadPrioIMGWithText('Medium', 'Prio-medium-white');
-        document.getElementById('lowSection').innerHTML = loadPrioIMGWithText('Low', 'Prio-low');
+    if (priority_medium) {
+        document.getElementById('urgentSection').innerHTML = loadPrioIMGWithText('urgent', 'prio-urgent');
+        document.getElementById('mediumSection').innerHTML = loadPrioIMGWithText('medium', 'prio-medium-white');
+        document.getElementById('lowSection').innerHTML = loadPrioIMGWithText('low', 'prio-low');
     }
-    if (priotity_low) {
-        document.getElementById('urgentSection').innerHTML = loadPrioIMGWithText('Urgent', 'Prio-urgent');
-        document.getElementById('mediumSection').innerHTML = loadPrioIMGWithText('Medium', 'Prio-medium');
-        document.getElementById('lowSection').innerHTML = loadPrioIMGWithText('Low', 'Prio-low-white');
+    if (priority_low) {
+        document.getElementById('urgentSection').innerHTML = loadPrioIMGWithText('urgent', 'prio-urgent');
+        document.getElementById('mediumSection').innerHTML = loadPrioIMGWithText('medium', 'prio-medium');
+        document.getElementById('lowSection').innerHTML = loadPrioIMGWithText('low', 'prio-low-white');
     }
 }
 
@@ -197,7 +195,8 @@ function addAssignedToList() {
         let firstName = contact['firstName'];
         let lastName = contact['lastName'];
         let acronym = firstName[0] + lastName[0];
-        document.getElementById('assigned-to-choices').innerHTML += `<div class="assigned-to-line"><label for="assigned-to-${i}" id="assigned_name${i}">${firstName + ' ' + lastName}</label><input type="checkbox" id="assigned-to-${i}" value="${acronym}"></div>`
+        document.getElementById('assigned-to-choices').innerHTML += `<div class="assigned-to-line"><label for="assigned-to-${i}" 
+        id="assigned_name${i}">${firstName + ' ' + lastName}</label><input type="checkbox" id="assigned-to-${i}" value="${acronym}"></div>`
     }
 }
 
@@ -224,7 +223,6 @@ function changeCategoryHeader(name) {
     document.getElementById('category-header').innerHTML = name;
     category = name;
     currentCategory = category;
-
     categorySelected(name);
 }
 
@@ -381,7 +379,7 @@ function fillTheTasks(id) {
     let text = tasks[id]['body_content'];
     let category = tasks[id]['category'];
     let date = tasks[id]['date'];
-    let prio = tasks[id]['priotity'][0]['priotity'];
+    let prio = tasks[id]['priority'][0]['priority'];
     let thisSubtasks = tasks[id]['subtasks'];
 
     checkPrioButton(prio);
@@ -398,14 +396,14 @@ function fillTheTasks(id) {
  */
 function checkPrioButton(prio) {
     if (prio == 'urgent') {
-        priotity_urgent = document.getElementById('urgentBtn').checked = true;
-        priotity_medium = document.getElementById('mediumBtn').checked = false;
-        priotity_low = document.getElementById('lowBtn').checked = false;
+        priority_urgent = document.getElementById('urgentBtn').checked = true;
+        priority_medium = document.getElementById('mediumBtn').checked = false;
+        priority_low = document.getElementById('lowBtn').checked = false;
     }
     else if (prio == 'medium') {
-        priotity_urgent = document.getElementById('urgentBtn').checked = false;
-        priotity_medium = document.getElementById('mediumBtn').checked = true;
-        priotity_low = document.getElementById('lowBtn').checked = false;
+        priority_urgent = document.getElementById('urgentBtn').checked = false;
+        priority_medium = document.getElementById('mediumBtn').checked = true;
+        priority_low = document.getElementById('lowBtn').checked = false;
     }
 }
 
@@ -493,7 +491,7 @@ function createEditedTaskJson(id, title, description, assigned_to, due_date) {
         'body_content': description,
         'progress': '',
         'users': assigned_to,
-        'priotity': checkPrioity(),
+        'priority': checkPriority(),
         'date': due_date,
         'subtasks': subtasks
     }

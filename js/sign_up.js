@@ -45,8 +45,6 @@ function displayErrorMessage(messageElement, hideElement, messageText) {
     }, 3000);
 }
 
-  
-
 
 /**
  * Adds a new user to the users array and stores it in the backend. *

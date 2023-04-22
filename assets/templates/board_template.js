@@ -17,10 +17,12 @@ function loadCardFullText(task_name, choiceTask) {
                 <section class="subtaskSection" id="subtaskSection">
                 </section></div>
                 <div class="makeRow"><b class="margin10">Due Date: </b><p>${task_name[choiceTask]['date']}</p></div>
-                <div class="makeRow"><b class="margin10">Priority: </b><p class="prio-${task_name[choiceTask]['priotity'][0]['priotity']}-popUp">${task_name[choiceTask]['priotity'][0]['priotity']} <img src="${tasks[choiceTask]['priotity'][0]['img_white']}"></p></div>
+                <div class="makeRow"><b class="margin10">Priority: </b><p class="prio-${task_name[choiceTask]['priority'][0]['priority']}-popUp">${task_name[choiceTask]['priority'][0]['priority']} 
+                <img src="${tasks[choiceTask]['priority'][0]['img-white']}"></p></div>
                 <div class="makeRow"><b class="margin10">Assigned To: </b></div>
                 <div class="users makeColumn" id="userSection"></div>
-                <div class="space"><img class="changeIcon" onclick="editTask(${choiceTask})" src="./assets/img/edit_pencil.svg"<div class="put_it_right"><img class="trash-icon" src="./assets/img/empty-trash-32.png" onclick=delCard(${choiceTask})></div></div>
+                <div class="space"><img class="changeIcon" onclick="editTask(${choiceTask})" src="./assets/img/edit-pencil.svg"<div class="put_it_right">
+                <img class="trash-icon" src="./assets/img/empty-trash-32.png" onclick=delCard(${choiceTask})></div></div>
             </div>
         </div>    
     `
@@ -38,7 +40,6 @@ function loadCardBoardText(tasks_name, id) {
     return `
     <div>
     <div id="card-head-${id}" class="card" id=card${id} draggable="true" ondragstart="startDragging(${id})" onclick="checkWhichMenu(${id}); event.stopPropagation();">
-        
             <div class="card-content">                                      
             <div id="card-head-color" class="card-head" style="background-color: ${tasks_name['color']}">
                     ${(tasks_name['category'])}
@@ -49,11 +50,11 @@ function loadCardBoardText(tasks_name, id) {
                 </div>
                 <div id="progress${id}">
                 </div>
-                <div class="priotity_users">
+                <div class="priority_users">
                     <div class="users" id="users${id}">
                     </div>
-                    <div class="priotity">
-                        <img src="${tasks_name['priotity'][0]['img']}" alt="">
+                    <div class="priority">
+                        <img src="${tasks_name['priority'][0]['img']}" alt="">
                     </div>
                 </div>
             </div>
@@ -61,7 +62,7 @@ function loadCardBoardText(tasks_name, id) {
             <div>
                 <div class="popUpWish d-none" id="contextMenu${id}">
                     <div class="headContextMenu"><h3>Choose your wish</h3><img onclick="closeHeadContextMenu(${id}); event.stopPropagation(); " src="./assets/img/xicon.png"></div>
-                    <img src="./assets/img/summary_underline.svg">
+                    <img src="./assets/img/summary-underline.svg">
                     <div onclick="changeSplit('to_do',${id})">
                         <p>Change to <b>To Do</b></p>
                     </div>
@@ -81,7 +82,6 @@ function loadCardBoardText(tasks_name, id) {
             </div>
     </div>
     </div>
-    
     `
 }
 
@@ -123,10 +123,10 @@ function loadAddTaskTmp() {
                                 <div class="select-wrapper" id="select-wrapper" onclick="openDropdown('category-choices')">
                                     <div class="sector_top" id="sector-top">
                                         <p id="category-header">Select your Category</p>
-                                        <img src="./assets/img/arrow_down.png">
+                                        <img src="./assets/img/arrow-down.png">
                                     </div>
                                     <div class="category-choices d-none" id="category-choices">
-                                        <div class="category" onclick="openAddNewCategory('category-choices')">New Category<img class="new-category-img" src="assets/img/add_task_mob.svg">
+                                        <div class="category" onclick="openAddNewCategory('category-choices')">New Category<img class="new-category-img" src="assets/img/add-task-mob.svg">
                                     </div>
                                     <div class="category" onclick="changeCategoryHeader('Marketing')">
                                         <div id="marketing">Marketing </div>
@@ -155,7 +155,7 @@ function loadAddTaskTmp() {
                             <label>Assigned To</label>
                             <div class="select-wrapper assigned-to-wrapper">
                                 <div class="sector_top" onclick="openDropdown('assigned-to-choices')">
-                                    <p id="assigned-to-header">Select your Members</p><img src="./assets/img/arrow_down.png">
+                                    <p id="assigned-to-header">Select your Members</p><img src="./assets/img/arrow-down.png">
                                 </div>
                                 <div class="assigned-to-choices d-none" id="assigned-to-choices">
                                     <div class="assigned-to" onclick="changeCategoryHeader('Marketing')">
@@ -192,19 +192,20 @@ function loadAddTaskTmp() {
                     <label>Prio</label>
                     <div onchange="changeColor(); return false" class="prio-btn-container">
                         <input type="radio" class="checkbox_urgen" id="urgentBtn" name="radio">
-                        <label for="urgentBtn" class="prio-btn prio-urgent urgentSection" for="checkbox_urgen" id="urgentSection">Urgent<img id="prioUrgentWhite" src="assets/img/Prio-urgent.png"></label>
+                        <label for="urgentBtn" class="prio-btn prio-urgent urgentSection" for="checkbox_urgen" id="urgentSection">Urgent<img id="prioUrgentWhite" src="assets/img/prio-urgent.png"></label>
                         <input type="radio" class="checkbox_medium" id="mediumBtn" name="radio">
-                        <label for="mediumBtn" class="prio-btn prio-urgent mediumSection" for="checkbox_urgen" id="mediumSection">Medium<img id="prioUrgentWhite" src="assets/img/Prio-medium.png"></label>
-                        <input type="radio" class="checkbox_low" id="lowBtn" name="radio" checked><label for="lowBtn" class="prio-btn prio-urgent lowSection" for="checkbox_urgen" id="lowSection">Low<img id="prioUrgentWhite" src="assets/img/Prio-low-white.png"></label>
+                        <label for="mediumBtn" class="prio-btn prio-urgent mediumSection" for="checkbox_urgen" id="mediumSection">Medium<img id="prioUrgentWhite" src="assets/img/prio-medium.png"></label>
+                        <input type="radio" class="checkbox_low" id="lowBtn" name="radio" checked><label for="lowBtn" class="prio-btn prio-urgent lowSection" for="checkbox_urgen" id="lowSection">Low<img id="prioUrgentWhite" 
+                        src="assets/img/prio-low-white.png"></label>
                     </div>
                     <div class="features-container">
                         <label>Subtasks</label>
                         <div class="subtask-container">
                             <input class="subtask-input" onclick="inputChangeSubIcons()"placeholder="Add new subtask" id="subtask"><img id="plusSubtaskImg" class="plus-icon" src="assets/img/plus-icon.png" onclick="changeSubIcon()">
                             <div class="subtask-img-container">
-                                <img id="clearSubtaskImg" src="assets/img/icon_cancel_subtask.svg" onclick="clearSubtask()" class="subtask-icons d-none">
+                                <img id="clearSubtaskImg" src="assets/img/icon-cancel-subtask.svg" onclick="clearSubtask()" class="subtask-icons d-none">
                                 <div class="gap-img-subtask"></div>
-                                <img id="addSubtaskImg" src="assets/img/icon_check_subtask.svg" onclick="addSubtask()" class="subtask-icons d-none">
+                                <img id="addSubtaskImg" src="assets/img/icon-check-subtask.svg" onclick="addSubtask()" class="subtask-icons d-none">
                             </div>
                         </div>
                     <div>
@@ -213,8 +214,8 @@ function loadAddTaskTmp() {
             </div>
         </div>
         <div class="submit-and-clear" id="submit-and-clear">
-            <div class="btn-clear" onclick="clearAll()">Clear<img class="clear-img" src ="assets/img/iconoir_cancel.svg"></div>
-            <div><Button class="btn-createTask">Create Task<img src ="assets/img/akar-icons_check.svg"></Button></div>
+            <div class="btn-clear" onclick="clearAll()">Clear<img class="clear-img" src ="assets/img/iconoir-cancel.svg"></div>
+            <div><Button class="btn-createTask">Create Task<img src ="assets/img/akar-icons-check.svg"></Button></div>
         </div>
     </div>
 </div>
@@ -291,7 +292,7 @@ function loadPrioIMGWithText(pri, prioIMG) {
 
 
 function loadEditAddTaskTmp(id) {
-  return `<div class="popUp-background" id="close-add-task" onclick="closeAddtask()">
+    return `<div class="popUp-background" id="close-add-task" onclick="closeAddtask()">
     <div class="popUp-content_add_task" id="popup-add-task" onclick="event.stopPropagation()">
     <div class="headerPopUp"><h2>Add Task</h2><img src="./assets/img/xicon.png" onclick="closePopUpAddTask()"></div>
     <form onsubmit="editAddTask(${id});return false">
@@ -326,10 +327,10 @@ function loadEditAddTaskTmp(id) {
             </div>
             <div class="select-wrapper" id="select-wrapper" onclick="openDropdown('category-choices')">
                 <div class="sector_top">
-                    <p id="category-header">Select your Category</p><img src="./assets/img/arrow_down.png">
+                    <p id="category-header">Select your Category</p><img src="./assets/img/arrow-down.png">
                 </div>
                 <div class="category-choices d-none" id="category-choices">
-                    <div class="category" onclick="openAddNewCategory('category-choices')">New Category<img class="new-category-img" src="assets/img/add_task_mob.svg">
+                    <div class="category" onclick="openAddNewCategory('category-choices')">New Category<img class="new-category-img" src="assets/img/add-task-mob.svg">
                     </div>
                     <div class="category" onclick="changeCategoryHeader('Marketing')">
                         <div id="marketing">Marketing </div>
@@ -358,8 +359,7 @@ function loadEditAddTaskTmp(id) {
             <label>Assigned To</label>
             <div class="select-wrapper assigned-to-wrapper">
                 <div class="sector_top" onclick="openDropdown('assigned-to-choices')">
-                    <p id="assigned-to-header">Select your Members</p><img
-                    src="./assets/img/arrow_down.png">
+                    <p id="assigned-to-header">Select your Members</p><img src="./assets/img/arrow-down.png">
                 </div>
                 <div class="assigned-to-choices d-none" id="assigned-to-choices">
                     <div class="assigned-to" onclick="changeCategoryHeader('Marketing')">
@@ -396,11 +396,11 @@ function loadEditAddTaskTmp(id) {
             <label>Prio</label>
             <div onchange="changeColor(); return false" class="prio-btn-container">
                 <input type="radio" class="checkbox_urgen" id="urgentBtn" name="radio">
-                <label for="urgentBtn" class="prio-btn prio-urgent urgentSection" for="checkbox_urgen" id="urgentSection">Urgent<img id="prioUrgentWhite" src="assets/img/Prio-urgent.png"></label>
+                <label for="urgentBtn" class="prio-btn prio-urgent urgentSection" for="checkbox_urgen" id="urgentSection">Urgent<img id="prioUrgentWhite" src="assets/img/prio-urgent.png"></label>
                 <input type="radio" class="checkbox_medium" id="mediumBtn" name="radio">
-                <label for="mediumBtn" class="prio-btn prio-urgent mediumSection" for="checkbox_urgen" id="mediumSection">Medium<img id="prioUrgentWhite" src="assets/img/Prio-medium.png"></label>
+                <label for="mediumBtn" class="prio-btn prio-urgent mediumSection" for="checkbox_urgen" id="mediumSection">Medium<img id="prioUrgentWhite" src="assets/img/prio-medium.png"></label>
                 <input type="radio" class="checkbox_low" id="lowBtn" name="radio" checked>
-                <label for="lowBtn" class="prio-btn prio-urgent lowSection" for="checkbox_urgen" id="lowSection">Low<img id="prioUrgentWhite" src="assets/img/Prio-low-white.png"></label>
+                <label for="lowBtn" class="prio-btn prio-urgent lowSection" for="checkbox_urgen" id="lowSection">Low<img id="prioUrgentWhite" src="assets/img/prio-low-white.png"></label>
             </div>
             <div class="features-container">
                 <label>Subtasks</label>
@@ -408,9 +408,9 @@ function loadEditAddTaskTmp(id) {
                     <input class="subtask-input" onclick="inputChangeSubIcons()"placeholder="Add new subtask" id="subtask">
                     <img id="plusSubtaskImg" class="plus-icon" src="assets/img/plus-icon.png" onclick="changeSubIcon()">
                     <div class="subtask-img-container">
-                        <img id="clearSubtaskImg" src="assets/img/icon_cancel_subtask.svg" onclick="clearSubtask()" class="subtask-icons d-none">
+                        <img id="clearSubtaskImg" src="assets/img/icon-cancel-subtask.svg" onclick="clearSubtask()" class="subtask-icons d-none">
                         <div class="gap-img-subtask"></div>
-                        <img id="addSubtaskImg" src="assets/img/icon_check_subtask.svg" onclick="addSubtask()" class="subtask-icons d-none">
+                        <img id="addSubtaskImg" src="assets/img/icon-check-subtask.svg" onclick="addSubtask()" class="subtask-icons d-none">
                     </div>
                 </div>
                 <div>
@@ -419,8 +419,8 @@ function loadEditAddTaskTmp(id) {
             </div>
         </div>
         <div class="submit-and-clear" id="submit-and-clear">
-            <div class="btn-clear" onclick="clearAll()">Clear<img class="clear-img" src ="assets/img/iconoir_cancel.svg"></div>
-            <div><Button class="btn-createTask">Save Task<img src ="assets/img/akar-icons_check.svg"></Button></div>
+            <div class="btn-clear" onclick="clearAll()">Clear<img class="clear-img" src ="assets/img/iconoir-cancel.svg"></div>
+            <div><Button class="btn-createTask">Save Task<img src ="assets/img/akar-icons-check.svg"></Button></div>
         </div>
     </div>
 </div>
@@ -430,6 +430,3 @@ function loadEditAddTaskTmp(id) {
 <script>setDateToday();</script>
 `
 }
-
-
-

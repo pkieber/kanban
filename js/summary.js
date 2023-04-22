@@ -117,7 +117,7 @@ function showCountUrgent() {
     let countUrgent = document.getElementById('countUrgent');
     let count = 0;
     for (let i = 0; i < allTasks.length; i++) {
-        if (allTasks[i].priotity[0].priotity === "urgent") {
+        if (allTasks[i].priority[0].priority === "urgent") {
             count++;
         }
     }

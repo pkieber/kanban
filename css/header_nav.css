@@ -59,7 +59,7 @@ header {
 }
 
 @media(max-width:1200px) {
-     :root {
+    :root {
         --nav-width: 0;
     }
 }
@@ -87,7 +87,6 @@ header {
         --header-height: 0;
     }
 }
-
 
 /* header end */
 

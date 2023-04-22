@@ -49,7 +49,7 @@ function dontClose(event) {
 /**
  * Logs out the current user by deleting their information from the local storage and redirecting the user to the index page.
  */
- function logOut() {
+function logOut() {
     localStorage.removeItem('current-user');
     window.location.href = 'index.html';
 }

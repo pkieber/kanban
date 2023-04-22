@@ -153,19 +153,19 @@ body {
 }
 
 .input-email-img {
-    background-image: url(../assets/img/log_in_email_img.svg);
+    background-image: url(../assets/img/log-in-email-img.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - 15px);
 }
 
 .input-password-img {
-    background-image: url(../assets/img/log_in_pw_img.svg);
+    background-image: url(../assets/img/log-in-pw-img.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - 15px);
 }
 
 .input-name-img {
-    background-image: url(../assets/img/sign_up_name_img.svg);
+    background-image: url(../assets/img/sign-up-name-img.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - 15px);
 }

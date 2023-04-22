@@ -42,7 +42,7 @@ function showContactFirstLettersHTML(firstLetter) {
 function showContactDetailsHTML(selectedContact, i, userShort) {
     return `
         <div onclick="closeContactOverlay()" class="close-btn close-btn-overlay">
-            <img class="close-icon" title="back" src="./assets/img/arrow_left.svg" alt="#">
+            <img class="close-icon" title="back" src="./assets/img/arrow-left.svg" alt="#">
         </div>
         <div class="contact-selection">
             <div id="selectedContactColor" class="contact-letters big-letters" style="background-color: ${selectedContact.color}">${selectedContact.lastName.charAt(0)} ${selectedContact.firstName.charAt(0)}</div>
@@ -53,7 +53,7 @@ function showContactDetailsHTML(selectedContact, i, userShort) {
         </div>
         <div class="contact-information-title">
             <p>Contact Information</p>
-            <div title="edit contact info" onclick="editContact(${i})" class="contact-edit"><img class="contact-edit-icon" src="./assets/img/edit_icon.svg">Edit Contact</div>
+            <div title="edit contact info" onclick="editContact(${i})" class="contact-edit"><img class="contact-edit-icon" src="./assets/img/edit-icon.svg">Edit Contact</div>
         </div>
         <h4>Email</h4>
         <div class="contact-email">${selectedContact.email}</div>
@@ -61,7 +61,7 @@ function showContactDetailsHTML(selectedContact, i, userShort) {
         <div class="contact-name">${selectedContact.phone}</div>
         <div class="contact-edit-tools">
             <div title="delete contact"><img onclick="deleteSelectedContact(${i})" class="contact-trash-icon" src="./assets/img/empty-trash-32.png"></div>
-            <div class="icon-bottom-right" title="edit contact info" onclick="editContact(${i})"><img class="edit-pencil-icon" src="./assets/img/edit_pencil.svg"></div>
+            <div class="icon-bottom-right" title="edit contact info" onclick="editContact(${i})"><img class="edit-pencil-icon" src="./assets/img/edit-pencil.svg"></div>
         </div>
     `;
 }
@@ -76,7 +76,7 @@ function openEditContactFormHTML(selectedContact) {
     return `
         <div id="contactForm" class="contact-form-overlay">
             <div class="contact-form-left">
-                <img class="contact-form-logo" src="./assets/img/Logo-Join.png" alt="#">
+                <img class="contact-form-logo" src="./assets/img/logo-join.png" alt="#">
                 <span class="contact-form-heading">Edit Contact</span>
                 <img class="contact-form-underline" src="assets/img/underline.svg" alt="">
             </div>
@@ -85,7 +85,7 @@ function openEditContactFormHTML(selectedContact) {
             <div class="contact-input-container margin-top">
                 <div onclick="closeFormById('contactForm')" class="icon-top-right" title="close form">
                     <img class="contact-cancel-icon" src="./assets/img/contact-cancel-icon.svg" alt="#">
-                    <img class="contact-cancel-icon-mobile hide-content" src="assets/img/x_ixon.png" alt="">
+                    <img class="contact-cancel-icon-mobile hide-content" src="assets/img/x-icon.png" alt="">
                 </div>
                 <form onsubmit="updateContact(); return false;">
                     <div class="form-group">
@@ -151,10 +151,10 @@ function openAddTaskContactFormHTML() {
                 </div>
                     <div class="select-wrapper"  id="select-wrapper"  onclick="openDropdown('category-choices')">
                         <div class="sector_top">
-                            <p id="category-header">Select your Category</p><img src="./assets/img/arrow_down.png">
+                            <p id="category-header">Select your Category</p><img src="./assets/img/arrow-down.png">
                         </div>
                         <div class="category-choices d-none" id="category-choices">
-                        <div class="category" onclick="openAddNewCategory('category-choices')">New Category<img class="new-category-img" src="assets/img/add_task_mob.svg"></div>
+                        <div class="category" onclick="openAddNewCategory('category-choices')">New Category<img class="new-category-img" src="assets/img/add-task-mob.svg"></div>
                             <div class="category" onclick="changeCategoryHeader('Marketing')">
                                 <div id="marketing">Marketing </div>
                                 <div class="circle" style="background: #0038ff;"></div>
@@ -182,8 +182,7 @@ function openAddTaskContactFormHTML() {
                     <label>Assigned To</label>
                     <div class="select-wrapper assigned-to-wrapper">
                         <div class="sector_top" onclick="openDropdown('assigned-to-choices')">
-                            <p id="assigned-to-header">Select your Members</p><img
-                                src="./assets/img/arrow_down.png">
+                            <p id="assigned-to-header">Select your Members</p><img src="./assets/img/arrow-down.png">
                         </div>
                         <div class="assigned-to-choices d-none" id="assigned-to-choices">
                             <div class="assigned-to" onclick="changeCategoryHeader('Marketing')">
@@ -230,17 +229,17 @@ function openAddTaskContactFormHTML() {
                             <input type="radio" class="checkbox_urgen" id="urgentBtn" name="radio">
                             <label for="urgentBtn" class="prio-btn prio-urgent urgentSection" for="checkbox_urgen"
                                 id="urgentSection">
-                                Urgent<img id="prioUrgentWhite" src="assets/img/Prio-urgent.png">
+                                Urgent<img id="prioUrgentWhite" src="assets/img/prio-urgent.png">
                             </label>
                             <input type="radio" class="checkbox_medium" id="mediumBtn" name="radio">
                             <label for="mediumBtn" class="prio-btn prio-urgent mediumSection" for="checkbox_urgen"
                                 id="mediumSection">
-                                Medium<img id="prioUrgentWhite" src="assets/img/Prio-medium.png">
+                                Medium<img id="prioUrgentWhite" src="assets/img/prio-medium.png">
                             </label>
                             <input type="radio" class="checkbox_low" id="lowBtn" name="radio" checked>
                             <label for="lowBtn" class="prio-btn prio-urgent lowSection" for="checkbox_urgen"
                                 id="lowSection">
-                                Low<img id="prioUrgentWhite" src="assets/img/Prio-low-white.png">
+                                Low<img id="prioUrgentWhite" src="assets/img/prio-low-white.png">
                             </label>
                         </div>
                         <div class="features-container">
@@ -249,9 +248,9 @@ function openAddTaskContactFormHTML() {
                                 <input class="subtask-input" onclick="inputChangeSubIcons()"placeholder="Add new subtask" id="subtask">
                                 <img id="plusSubtaskImg" class="plus-icon" src="assets/img/plus-icon.png" onclick="changeSubIcon()">
                                 <div class="subtask-img-container">
-                                <img id="clearSubtaskImg" src="assets/img/icon_cancel_subtask.svg" onclick="clearSubtask()" class="subtask-icons d-none">
+                                <img id="clearSubtaskImg" src="assets/img/icon-cancel-subtask.svg" onclick="clearSubtask()" class="subtask-icons d-none">
                                 <div class="gap-img-subtask"></div>
-                                <img id="addSubtaskImg" src="assets/img/icon_check_subtask.svg" onclick="addSubtask()" class="subtask-icons d-none">
+                                <img id="addSubtaskImg" src="assets/img/icon-check-subtask.svg" onclick="addSubtask()" class="subtask-icons d-none">
                                 </div>
                             </div>
                             <div>
@@ -263,7 +262,7 @@ function openAddTaskContactFormHTML() {
                 <div class="contact-form-buttons btn-centered">
                     <button type="button" onclick="closeFormById('formTaskContainer')" class="contact-cancel-btn" title="close form">
                         <p>Cancel</p>
-                        <img class="contact-create-icon" src="assets/img/iconoir_cancel.svg" alt="#">
+                        <img class="contact-create-icon" src="assets/img/iconoir-cancel.svg" alt="#">
                     </button>
                     <button type="submit" class="contact-add-btn" title="add new task">
                         <p>Create Task</p>
