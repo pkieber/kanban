@@ -138,7 +138,6 @@ body {
     color: #D1D1D1;
     font-size: 18px;
     font-weight: 400;
-    /* line-height: 25.2px; */
 }
 
 .input-email-pw {
@@ -181,7 +180,6 @@ body {
 .login-bottom-font {
     font-weight: 400;
     font-size: 16px;
-    /* line-height: 19.2px; */
 }
 
 .login-bottom span {
@@ -206,7 +204,6 @@ body {
 .btn-font {
     font-size: 21px;
     font-weight: 700;
-    /* line-height: 25.2px; */
 }
 
 .login-buttons button {

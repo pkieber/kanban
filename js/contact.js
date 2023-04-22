@@ -130,7 +130,7 @@ function showContactDetails(i) {
  * Highlights a selected contact by giving it a different color.
  * @param {*} i - The index of the contact to highlight. 
  */
-function hightlightContact(i) {
+function highlightContact(i) {
     let currentHighlightContact = document.getElementById('highlight-' + i);
     currentHighlightContact.classList.add('selected-contact-box');
     if (previouslySelectedContact !== null) {

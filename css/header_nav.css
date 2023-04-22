@@ -83,7 +83,7 @@ header {
         padding: 0 25px;
         height: 80px;
     }
-     :root {
+    :root {
         --header-height: 0;
     }
 }

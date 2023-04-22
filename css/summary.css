@@ -245,14 +245,6 @@ h1 {
     color: #2A3647;
 }
 
-
-/* .greet-container-mobile {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
 .greet-content-mobile {
     display: flex;
     flex-direction: column;

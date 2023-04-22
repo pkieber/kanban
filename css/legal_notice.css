@@ -23,7 +23,6 @@ a {
     flex-direction: column;
     align-items: flex-start;
     gap: 35px;
-    /* width: 976px; */
     height: 411px;
     margin-top: -35px;
     padding-right: 200px;
@@ -106,9 +105,4 @@ p {
     .text-container {
         width: 320px;
     }
-
-    /* .link a {
-        display: block;
-        width: 360px;
-    } */
 }

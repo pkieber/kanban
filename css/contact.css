@@ -10,13 +10,11 @@ body {
 .overflow {
     position: relative;
     overflow-x: hidden;
-    /* height: 100vh; */
 }
 
 .contacts-main-container {
     display: flex;
     margin-left: 236px;
-    /* margin-top: 89px; */
 }
 
 h1 {
@@ -72,7 +70,6 @@ h1 {
 }
 
 .contact-list-box {
-    /* transform: translateX(0); */
     margin: 20px;
     padding: 10px 15px 10px 15px;
     gap: 20px;
@@ -558,7 +555,6 @@ textarea {
 
 select::-ms-expand {
     display: none;
-    /* Standardpfeil im IE 10 und 11 entfernen */
 }
 
 .middle-gap {
@@ -572,7 +568,6 @@ select::-ms-expand {
     width: 100%;
     gap: 10px;
     margin-top: 6px;
-    /* margin-bottom: 20px; */
 }
 
 .date {
@@ -598,7 +593,6 @@ select::-ms-expand {
     font-weight: 400;
     background-color: rgb(255, 255, 255);
     width: 100%;
-    /* height: 51px; */
     gap: 10px;
     transition: all 100ms ease-in-out;
     cursor: pointer;
@@ -606,7 +600,6 @@ select::-ms-expand {
 
 .prio-btn:hover {
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
-    /* height: 52px; */
     width: 110%;
 }
 
@@ -691,11 +684,6 @@ select::-ms-expand {
     width: 100%;
     height: 100%;
 }
-
-/* #closeAddContactPopup {
-    height: 73vh;
-    width: 100vw;
-} */
 
 .popup-contact-added {
     position: fixed;
@@ -812,12 +800,10 @@ select::-ms-expand {
     .contact-form-overlay {
         display: unset;
         border-radius: 30px;
-        /* top: 465px; */
     }
     .contact-form-overlay-position {
         position: absolute;
         top: 50%;
-        /* left: -48%!important; */
     }
     .contact-form-left-neutral {
         flex-direction: column;
@@ -945,11 +931,7 @@ select::-ms-expand {
 
 @media(max-width: 400px) {
 
-    /* .overflow {
-        z-index: 100;
-    } */
     .contact-form-overlay {
-        /* width: 100%; */
         border-radius: 0px;
     }
     .contact-form-left {

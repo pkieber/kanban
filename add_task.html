@@ -15,27 +15,14 @@
     <script src="js/add_task.js"></script>
     <script src="assets/templates/board_template.js"></script>
     <script src="js/add_task_and_board.js"></script>
-    <script>
-    </script>
-
     <title>Add Task | Join</title>
 </head>
 
-
-
 <body onload="init()" ; onclick="closeLogoutMenu()">
-
     <!--Header + Nav Templates-->
     <div w3-include-html="assets/templates/header.html"></div>
     <div w3-include-html="assets/templates/nav.html"></div>
-
     <!--Main Content-->
-
-    <!-- <form onsubmit="addTask();return false" class="add-task-mobile d-none" >
-    <button><img src="assets/img/add_task_btn_mob.svg" alt="Create task button"></button>
-    </form> -->
-
-
     <div class="main-container">
         <div class="title-container">
             <div class="headline-mobile d-none">Kanban Project Management Tool</div>
@@ -134,7 +121,6 @@
                     <div class="features-container">
                         <label>Prio</label>
                         <div onchange="changeColor(); return false" class="prio-btn-container">
-
                             <input type="radio" class="checkbox_urgen" id="urgentBtn" name="radio">
                             <label for="urgentBtn" class="prio-btn prio-urgent urgentSection" for="checkbox_urgen"
                                 id="urgentSection">
@@ -151,9 +137,6 @@
                                 Low<img id="prioUrgentWhite" src="assets/img/Prio-low-white.png">
                             </label>
                         </div>
-
-
-
                         <div class="features-container">
                             <label>Subtasks</label>
                             <div class="subtask-container">
