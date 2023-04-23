@@ -92,7 +92,6 @@ h1 {
     background-color: #2A3647;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
     width: 175px;
-    height: 175px;
 }
 
 .nav-to-content:hover span {
@@ -127,7 +126,6 @@ h1 {
 .urgent:hover {
     background-color: #2A3647;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
-    height: 155px;
     width: 490px;
 }
 
@@ -159,7 +157,6 @@ h1 {
 .todo-done:hover {
     background-color: #2A3647;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
-    height: 155px;
     width: 185px;
 }
 
