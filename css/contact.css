@@ -210,7 +210,7 @@ h1 {
 }
 
 .contact-edit-icon:hover {
-    background-color: #94d5f0;
+    background-color: #29ABE2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -235,7 +235,7 @@ h1 {
 }
 
 .contact-trash-icon:hover {
-    background-color: #94d5f0;
+    background-color: #29ABE2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
@@ -337,11 +337,10 @@ h1 {
     width: 140px;
 }
 
-.contact-cancel-btn:hover:hover {
+.contact-cancel-btn:hover {
     color: #29ABE2;
     border-color: #29ABE2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: all 125ms ease-in-out;
 }
 
 .contact-cancel-btn:hover .contact-create-icon {
@@ -888,6 +887,10 @@ select::-ms-expand {
     }
     .edit-pencil-icon {
         display: unset;
+        transition: all 225ms ease-in-out;
+    }
+    .edit-pencil-icon:hover {
+        height: 45px;
     }
     .btn-centered {
         display: flex;

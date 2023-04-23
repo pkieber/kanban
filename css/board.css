@@ -5,6 +5,7 @@ body {
     scrollbar-width: none;
     /* for Firefox */
     overflow-y: scroll;
+    user-select: none;
 }
 
 body::-webkit-scrollbar {
@@ -139,7 +140,6 @@ a {
 .add_plus:hover {
     color: #0D99FF;
     border: solid 2px #0D99FF;
-    transition: all 255ms ease-in-out;
 }
 
 .card {
@@ -161,18 +161,19 @@ a {
 .trash-icon {
     cursor: pointer;
     padding: 10px;
+    transition: all 255ms ease-in-out;
 }
 
 .trash-icon:hover {
     background-color: #94d5f0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    transition: all 255ms ease-in-out;
 }
 
 .changeIcon {
     cursor: pointer;
     margin-left: -4px;
+    transition: all 225ms ease-in-out;
 }
 
 .changeIcon:hover {
@@ -510,5 +511,17 @@ a {
     }
     .drop-ground {
         width: 360px;
+    }
+}
+
+@media(max-width: 400px) {
+    .board-add-task {
+        width: 350px;
+    }
+    .card-content {
+        width: 85%;
+    }
+    .splits-head {
+        width: 95%;
     }
 }

@@ -7,6 +7,7 @@ body {
     padding-left: calc(355px - var(--nav-width));
     padding-top: calc(171px - var(--header-height));
     margin-bottom: 20px;
+    user-select: none;
 }
 
 .main-Color {

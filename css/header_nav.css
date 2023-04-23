@@ -127,6 +127,7 @@ nav {
     padding: 8px 53px;
     height: 46px;
     white-space: nowrap;
+    transition: all 225ms ease-in-out;
 }
 
 .nav-main:hover {
