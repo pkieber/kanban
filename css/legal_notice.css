@@ -48,6 +48,10 @@ p {
     line-height: 19.2px;
 }
 
+li {
+    font-size: 17px;
+}
+
 @media(max-width: 1200px) {
     .contacts-main-container {
         padding-left: 275px;
@@ -80,10 +84,6 @@ p {
         padding: 0;
         margin-bottom: 120px;
         height: unset;
-    }
-
-    li {
-        font-size: 18px;
     }
 
     .arrow-left-legal-notice {
