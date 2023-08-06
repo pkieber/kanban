@@ -1,6 +1,6 @@
 let jsonFromServer = {};
 let BASE_SERVER_URL;
-setURL('https://patrick-kieber.developerakademie.net/smallest_backend_ever');
+setURL('your.url.com');
 
 const backend = {
     setItem: function(key, item) {
@@ -104,7 +104,7 @@ function saveJSONToServer() {
 function determineProxySettings() {
     return '';
 
-    if (window.location.href.indexOf('.developerakademie.com') > -1) {
+    if (window.location.href.indexOf('.url.com') > -1) {
         return '';
     } else {
         return 'https://cors-anywhere.herokuapp.com/';
